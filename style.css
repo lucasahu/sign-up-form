@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Work+Sans:ital,wght@0,300;1,300&display=swap');
+/* Google fonts */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+}
+
+.right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-col {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    width: 40vw;
+}
+
+.logo {
+    font-size: 60px;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0px 0px 20px black;
+    color: #c05f04;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-title {
+    font-size: 48px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer-top {
+    width: 100%;
+    height: 20%;
+}
+
+.spacer-bottom {
+    width: 100%;
+    height: 20%;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+
+}
