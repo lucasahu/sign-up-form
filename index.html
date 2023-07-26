@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background">
+        <div class="end-prompt">
+            <p class="title-prompt">Thank you for joining our waitlist!</p>
+            <p class="body-prompt">We're excited to have you on board. We'll keep you informed about updates and availability. Stay tuned for more exciting news!</p>
+            <p class="reminder-prompt">Make sure you follow us on our socials!</p>
+            <div class="socials-prompt">
+            <a href="https://github.com/lucasahu"><img src="./image/iconmonstr-github-1.svg" alt="github icon" class="github-icon"></a>
+            <a href="https://twitter.com/lucasahudev"><img src="./image/iconmonstr-twitter-1.svg" alt="twitter icon" class="twitter-follow-button"></a>
+            </div>
+            <button type="button" class="button-prompt">Done</button>
+        </div>
+    </div>
     <div class="main">
         <div class="left-col">
             <img class="banner" src="./image/mehdi-messrro-qzSSHkMTR38-unsplash.jpg" alt="cool apple-like picture">
@@ -18,33 +30,37 @@
                 <p class="description description-title">Empowering Modern Web Designs with Stylish Components</p>
                 <p class="description description-body">Effortlessly Stylish Components for Modern Web Designs. Elevate your UI and supercharge your productivity with our fully customizable and community-driven CSS Framework. Create captivating websites with ease!</p>
             </div>
-            <form action="data.txt" method="post">
+            <form action="" method="">
                 <div class="form">
                     <div class="row-1">
                         <p class="form-title">Join the waitlist</p>
                     </div>
                     <div class="row-2">
                         <div class="fullname">
-                            <label for="full-name">Full name</label>
-                            <input type="text" name="full-name" id="full-name" class="input">
+                            <label for="full-name">Your name</label>
+                            <input type="text" name="full-name" id="full-name" class="input full-name">
+                            <div class="fullname-error"></div>
                         </div>
                         <div class="email">
                             <label for="email">Email address</label>
-                            <input type="email" name="email" id="email" class="input">
+                            <input type="text" name="email" id="email" class="input email-input">
+                            <div class="email-error"></div>
                         </div>
                     </div>
                     <div class="row-3">
                         <div class="password">
                             <label for="password">Enter a password</label>
-                            <input type="password" name="password" id="password" class="input">
+                            <input type="password" name="password" id="password" class="input password-input">
+                            <div class="password-error"></div>
                         </div>
                         <div class="confirm-password">
                             <label for="confirm-password">Confirm your password</label>
-                            <input type="password" name="confirm-password" id="confirm-password" class="input">
+                            <input type="password" name="confirm-password" id="confirm-password" class="input confirm-password-input" required>
+                            <div class="confirm-password-error"></div>
                         </div>
                     </div>
                     <div class="row-4">
-                        <button type="submit">Sign Up</button>
+                        <button type="button" class="sign-up-button">Sign Up</button>
                     </div>
                 </div>
                 <div class="socials">

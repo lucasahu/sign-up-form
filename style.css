@@ -6,6 +6,68 @@ body {
     padding: 0;
 }
 
+.body-prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.reminder-prompt {
+    margin-bottom: 0px;
+}
+
+.title-prompt {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.socials-prompt {
+    display: flex;
+    margin-top: 0px;
+    gap: 15px;
+}
+
+.end-prompt {
+    padding: 0px 40px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(214, 214, 214);
+    border-top: none;
+    border-left: 2px solid rgb(214, 214, 214);
+    border-right: 2px solid rgb(214, 214, 214);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.63);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30vw;
+    height: 40vh;
+    visibility: hidden;
+}
+
+.background {
+    border-radius: 10px;
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.801);
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
 .main {
     display: flex;
 }
@@ -110,6 +172,7 @@ input[name=confirm-password] {
 }
 
 input {
+    text-indent: 25px;
     height: 2vh;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.068);
@@ -117,15 +180,25 @@ input {
 }
 
 .input:focus {
+    text-indent: 30px;
     height: 3vh;
     margin-bottom: -10px;
-    background-image: none;
+    background-size: 15px 15px;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.699)
 }
 
 input:hover {
     border: 2px solid rgba(0, 0, 0, 0.226);
+}
+
+input[name=full-name]:focus + .fullname-error, input[name=email]:focus + .email-error, input[name=password]:focus + .password-error, input[name=confirm-password]:focus + .confirm-password-error {
+    transition: 0.5s;
+    transform: translateY(10px);
+}
+
+input[name=full-name] + .fullname-error, input[name=email] + .email-error, input[name=password] + .password-error, input[name=confirm-password] + .confirm-password-error {
+    transition: 0.5s;
 }
 
 label {
@@ -186,19 +259,21 @@ button:active {
 
 .socials {
     display: flex;
+    margin-top: 15px;
+    gap: 15px;
 }
 
 footer {
     font-family: 'Work Sans', sans-serif;
 }
 
-.socials {
-    margin-top: 15px;
-    gap: 15px;
-}
-
 .github-footer {
     position: absolute;
     height: 2vh;
     width: 2vw;
+}
+
+.fullname-error, .email-error, .password-error, .confirm-password-error {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
 }
