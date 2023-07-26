@@ -16,6 +16,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.281);
+    box-shadow: -1px 1px 40px 1px rgba(0, 0, 0, 0.466);
 }
 
 .left-col {
@@ -41,6 +43,7 @@ body {
 }
 
 .form-title {
+    margin: 0;
     font-size: 48px;
     font-family: 'Work Sans', sans-serif;
 }
@@ -62,6 +65,7 @@ body {
 
 .row-2, .row-3 {
     display: flex;
+    gap: 50px;
 }
 
 .fullname, .email, .password, .confirm-password {
@@ -69,6 +73,7 @@ body {
     flex-direction: column;
 }
 form {
+    flex-direction: column;
     width: 100%;
     height: 60%;
     display: flex;
@@ -76,14 +81,88 @@ form {
     align-items: center;
 }
 
+input[name=full-name] {
+    background-image: url(./image/badge_FILL0_wght400_GRAD0_opsz48.svg);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+
+input[name=email] {
+    background-image: url(./image/alternate_email_FILL0_wght400_GRAD0_opsz48.svg);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+
+input[name=password] {
+    background-image: url(./image/key_FILL0_wght400_GRAD0_opsz48.svg);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+
+input[name=confirm-password] {
+    background-image: url(./image/lock_FILL0_wght400_GRAD0_opsz48.svg);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+
+input {
+    height: 2vh;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.068);
+    transition: 0.5s
+}
+
+.input:focus {
+    height: 3vh;
+    margin-bottom: -10px;
+    background-image: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.699)
+}
+
+input:hover {
+    border: 2px solid rgba(0, 0, 0, 0.226);
+}
+
+label {
+    font-family: 'Work Sans', sans-serif;
+}
+
 .spacer-top {
     width: 100%;
     height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 80%;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.description-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.description-body {
+    margin-top: 0;
 }
 
 .spacer-bottom {
     width: 100%;
     height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
 }
 
 button {
@@ -100,6 +179,26 @@ button {
 }
 
 button:active {
+    margin-top: 2px;
     border: none;
     box-shadow: inset 1px 3px 3px rgb(214, 214, 214);
+}
+
+.socials {
+    display: flex;
+}
+
+footer {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.socials {
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.github-footer {
+    position: absolute;
+    height: 2vh;
+    width: 2vw;
 }
