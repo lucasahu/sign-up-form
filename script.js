@@ -5,8 +5,8 @@ let confirmPasswordHasError = false;
 
 function confirmSignUp () {
     if (fullNameHasError == false && emailHasError == false && passwordHasError == false && confirmPasswordHasError == false) {
-        background.style.width = "101vw";
-        background.style.height = "101vh";
+        background.style.visibility = "visible";
+        background.style.opacity = "1";
         endPrompt.style.visibility = "visible";
 
     }

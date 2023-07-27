@@ -1,6 +1,149 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Work+Sans:ital,wght@0,300;1,300&display=swap');
 /* Google fonts */
 
+@media only screen and (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #background {
+        opacity: 0;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+        background-color: rgba(0, 0, 0, 0.801);
+        width: 100vw;
+        height: 2620px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        visibility: hidden;
+    }
+
+    #end-prompt {
+        z-index: 11;
+        padding: 0px 40px;
+        font-family: 'Work Sans', sans-serif;
+        background-color: white;
+        border-radius: 5px;
+        border-bottom: 2px solid rgb(214, 214, 214);
+        border-top: none;
+        border-left: 2px solid rgb(214, 214, 214);
+        border-right: 2px solid rgb(214, 214, 214);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.63);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40vw;
+        height: 50vh;
+        visibility: hidden;
+    }
+
+    #left-col {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #right-col {
+        width: 100vw;
+    }
+
+    #logo {
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        font-size: 60px;
+        font-family: 'Work Sans', sans-serif;
+        color: black;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #form {
+        height: 570px;
+    }
+
+    #row-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #row-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .input {
+        text-indent: 35px;
+        height: 4vh;
+        width: 50vw;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.068);
+        transition: 0.5s
+    }
+
+    #full-name:focus, #email:focus, #password:focus, #confirm-password:focus {
+        text-indent: 45px;
+        height: 6vh;
+        width: 50vw;
+        font-size: 30px;
+        margin-bottom: -10px;
+        background-size: 30px 45px;
+        outline: none;
+        border: 2px solid rgba(0, 0, 0, 0.699)
+    }
+
+    #full-name {
+        background-image: url(./image/badge_FILL0_wght400_GRAD0_opsz48.svg);
+        background-position: 10px 2px;
+        background-repeat: no-repeat;
+        background-size: 20px 30px;
+    }
+    
+    #email {
+        background-image: url(./image/alternate_email_FILL0_wght400_GRAD0_opsz48.svg);
+        background-position: 10px 2px;
+        background-repeat: no-repeat;
+        background-size: 20px 30px;
+    }
+    
+    #password {
+        background-image: url(./image/key_FILL0_wght400_GRAD0_opsz48.svg);
+        background-position: 10px 2px;
+        background-repeat: no-repeat;
+        background-size: 20px 30px;
+    }
+    
+    #confirm-password {
+        background-image: url(./image/lock_FILL0_wght400_GRAD0_opsz48.svg);
+        background-position: 10px 2px;
+        background-repeat: no-repeat;
+        background-size: 20px 30px;
+    }
+
+    #socials {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -54,18 +197,19 @@ body {
 }
 
 .background {
-    border-radius: 10px;
+    opacity: 0;
     transition-timing-function: ease-in;
     transition: 0.3s;
     background-color: rgba(0, 0, 0, 0.801);
-    width: 0vw;
-    height: 0vh;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
+    visibility: hidden;
 }
 
 .main {
@@ -145,45 +289,49 @@ form {
 
 input[name=full-name] {
     background-image: url(./image/badge_FILL0_wght400_GRAD0_opsz48.svg);
-    background-position: 10px 5px;
+    background-position: 10px 8px;
     background-repeat: no-repeat;
     background-size: 10px 10px;
 }
 
 input[name=email] {
     background-image: url(./image/alternate_email_FILL0_wght400_GRAD0_opsz48.svg);
-    background-position: 10px 5px;
+    background-position: 10px 8px;
     background-repeat: no-repeat;
     background-size: 10px 10px;
 }
 
 input[name=password] {
     background-image: url(./image/key_FILL0_wght400_GRAD0_opsz48.svg);
-    background-position: 10px 5px;
+    background-position: 10px 8px;
     background-repeat: no-repeat;
     background-size: 10px 10px;
 }
 
 input[name=confirm-password] {
     background-image: url(./image/lock_FILL0_wght400_GRAD0_opsz48.svg);
-    background-position: 10px 5px;
+    background-position: 10px 8px;
     background-repeat: no-repeat;
     background-size: 10px 10px;
 }
 
 input {
     text-indent: 25px;
-    height: 2vh;
+    height: 3vh;
+    width: 22vh;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.068);
     transition: 0.5s
 }
 
 .input:focus {
+    background-position: 7px 5px;
+    font-size: 20px;
     text-indent: 30px;
-    height: 3vh;
+    height: 4vh;
+    width: 22vh;
     margin-bottom: -10px;
-    background-size: 15px 15px;
+    background-size: 20px 25px;
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.699)
 }
